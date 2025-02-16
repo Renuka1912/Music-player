@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff660038, #d400ff9c, #ffea00a8, #32cd5449, #1e90ff, #892be22f);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.player {
+    background: linear-gradient(to bottom, #2f9aff4d, #bbdd2496); /* New Orange-Pink Gradient */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.562);
+    text-align: center;
+}
+/* Music cover image */
+#music-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* Song title */
+#title {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+    color: rgb(255, 0, 221); /* Bright color */
+}
+/* Controls section */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+/* Buttons styling */
+.controls button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: #3714ff; /* Bright pink */
+    color: rgb(0, 162, 255);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.controls button:hover {
+    background: #d0ff0059; /* Bright orange */
+}
+@keyframes floatMusic {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-50px) rotate(15deg); opacity: 0.8; }
+    100% { transform: translateY(-100px) rotate(30deg); opacity: 0; }
+}
+
+.music-note {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    animation: floatMusic 3s linear infinite;
+    opacity: 0;
+}
